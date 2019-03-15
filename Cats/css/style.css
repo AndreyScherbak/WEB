@@ -1,0 +1,30 @@
+body{
+	background-color : #4cb59c;
+	}
+.smallCats {
+	max-width: 200px;
+	border: 3px solid yellow;
+	-webkit-transition: all 1s linear; /*для хрома (webkit)*/
+	}
+.smallCats:hover{
+	-webkit-transform: scale(1.15);
+	border: 3px solid green; 
+	}
+#centercat {
+	display:block;
+	margin: auto;
+	padding: 30px;
+	max-width: 400px;
+	border: 0px;
+	}
+.btn {
+	background-color: gray;
+	color: white;
+	font-size: 14;
+	width: 60px;
+	height: 30px;
+	border: 2px solid #33ccff;
+	}
+div{
+	text-align: center;
+}

@@ -1,0 +1,29 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Cat Viewer</title>
+  <meta name="description" content="Cat Viewer">
+  <meta name="author" content="Andrii Shcherbak">
+	<script src="js/script.js"></script>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body onload="loadFunc()">
+  <img src="resources/1.jpg" id="centercat" alt="there could be a cat">
+  <div id="container" >
+  <img class ="smallCats" src="resources/1.jpg" id="0" alt="there could be a cat">
+  <img class ="smallCats" src="resources/2.jpg" id="1" alt="there could be a cat">
+  <img class ="smallCats" src="resources/3.jpg" id="2" alt="there could be a cat">
+  <img class ="smallCats" src="resources/4.jpg" id="3" alt="there could be a cat">
+  <img class ="smallCats" src="resources/5.jpg" id="4" alt="there could be a cat">
+  <img class ="smallCats" src="resources/6.jpg" id="5" alt="there could be a cat">
+  <img class ="smallCats" src="resources/7.jpg" id="6" alt="there could be a cat">
+  </div>
+  <div>
+  <input class = "btn" type="button" value="Left" onclick = "left()"> 
+  <input class = "btn" type="button" value="Right" onclick = "right()">
+  </div>
+</body>
+</html>
