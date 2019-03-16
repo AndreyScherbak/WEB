@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<bookstore>
+  <book>
+    <category>cooking</category>
+    <title>Everyday Italian</title>
+    <author>Giada De Laurentiis</author>
+    <price>30.00</price>
+  </book>
+  <book>
+    <category>children</category>
+    <title>Harry Potter</title>
+    <author>J K. Rowling</author>
+    <price>29.99</price>
+  </book>
+  <book >
+    <category>web</category>
+    <title>XQuery Kick Start</title>
+    <author>James McGovern</author>
+    <price>49.99</price>
+  </book>
+  <book>
+    <category>web</category>
+    <title>Learning XML</title>
+    <author>Erik T. Ray</author>
+    <price>39.95</price>
+  </book>
+  <book>
+    <category>programming</category>
+    <title>CLR via C#</title>
+    <author>Jeffrey Richter</author>
+    <price>50.50</price>
+  </book>
+</bookstore>
