@@ -84,3 +84,4 @@ D:\Folder\Sitecore\.NET Course\ASP.NET\Iteration 1\Projects\WEB\BookStore\BookSt
 D:\Folder\Sitecore\.NET Course\ASP.NET\Iteration 1\Projects\WEB\BookStore\BookStore\obj\Debug\BookStore.csproj.CopyComplete
 D:\Folder\Sitecore\.NET Course\ASP.NET\Iteration 1\Projects\WEB\BookStore\BookStore\obj\Debug\BookStore.dll
 D:\Folder\Sitecore\.NET Course\ASP.NET\Iteration 1\Projects\WEB\BookStore\BookStore\obj\Debug\BookStore.pdb
+D:\Folder\Sitecore\.NET Course\ASP.NET\Iteration 1\Projects\WEB\BookStore\BookStore\obj\Debug\BookStore.csprojAssemblyReference.cache

@@ -1,0 +1,20 @@
+﻿@model IEnumerable<string>
+
+@using (Html.BeginForm())
+{
+    <table>
+        <tr>
+            <th>
+                Authors
+            </th>
+        </tr>
+        @foreach (string authors in Model)
+        {
+            <tr>
+                <td>@Html.DisplayFor(m => authors)</td>
+            </tr>
+        }
+        <tr>
+    </table>
+    @Html.ActionLink("Back", "BookList")
+}

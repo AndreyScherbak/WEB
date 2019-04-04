@@ -1,0 +1,9 @@
+﻿The site is running. Date: 23/03/2019 14:22:31
+Total number of visits feedback page: 4
+Feedback: My feedback is something..
+The site is stopped. Date: 23/03/2019 14:22:55
+The site is running. Date: 23/03/2019 14:22:57
+The site is running. Date: 23/03/2019 14:53:11
+Total number of visits feedback page: 2
+Feedback: We are good!
+The site is stopped. Date: 23/03/2019 14:53:33

@@ -1,45 +1,85 @@
 ﻿@model IEnumerable<BookStore.Models.Book>
 
 @{
-    ViewBag.Title = "View";
+    ViewBag.Title = "BookStore";
+    var options = new AjaxOptions()
+    {
+        UpdateTargetId = "JsonH1",
+        Url = Url.Action("TakeBookJson"),
+
+    };
+}
+@using (Html.BeginForm())
+{
+
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Author)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Title)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Category)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Price)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Available)
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Author)
+
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Title)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Category)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Price)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Available)
+                </td>
+            </tr>
+
+        }
+
+    </table>
+    <p>
+        @Html.DropDownList("parameter", new SelectList(new[] { "All", "Authors", "Books about Programming", "Books with a price lower than 20 $" })) 
+        <input type="submit" value="Submit" />
+        @* Выпадающий список с фильтрами  *@
+    </p>
+}
+@using (Ajax.BeginForm(options))
+{
+    <h3 id="JsonH3" style="color: #465457; letter-spacing: 2px;"></h3>
+    foreach (var item in Model)
+    {
+        @Ajax.ActionLink("Take a book: " + item.Title, "TakeAndReturnBookJson", new { name = item.Title, isTake = true }, new AjaxOptions { UpdateTargetId = "JsonH3" }); <br/> //Ajax-ссылки на выдачу книги
+    }
+    <br />
+    <br />
+    foreach (var item in Model)
+    {
+        @Ajax.ActionLink("Return a book: " + item.Title, "TakeAndReturnBookJson", new { name = item.Title, isTake = false }, new AjaxOptions { UpdateTargetId = "JsonH3" }); <br/> //Ajax-ссылки на возврат книги
+    }
+
 }
 
-<h2>View</h2>
-
-
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.Author)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Title)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Category)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Price)
-        </th>
-        <th></th>
-    </tr>
-
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Author)
-
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Title)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Category)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Price)
-        </td>     
-    </tr>
+@section scripts
+{
+    <script src="~/Scripts/jquery.unobtrusive-ajax.min.js"></script>  
+    @* Подключил через NuGet *@
 }
-
-</table>
